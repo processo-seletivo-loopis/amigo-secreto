@@ -1,5 +1,5 @@
 <p align="center">
-  <img height=400 src="https://loopisjr.github.io/images/png.png">
+  <img height=200 src="https://loopisjr.github.io/images/png.png">
 </p><br>
 
 Repositório do website "Amigo Secreto" desenvolvido como teste de admissão 
