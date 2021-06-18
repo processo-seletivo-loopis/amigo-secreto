@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import Title from './components/Title';
+import ImageHome from './components/ImageHome';
+import Buttons from './components/Buttons';
+import friendsService from './services/friendsService';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App() {
 
-export default App;
+	const [friends, setFriends] = useState([]);
+
+	useEffect(() => {
+		const newFriends = friendsService.getFriends();
+		setFriends(newFriends);
+	}, [friends])
+
+	return (
+		<div>
+			<Title />
+			<ImageHome />
+			<Buttons />
+		</div>
+	);
+}
