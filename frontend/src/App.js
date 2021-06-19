@@ -12,7 +12,7 @@ export default function App() {
 	useEffect(() => {
 		const newFriends = friendsService.getFriends();
 		setFriends(newFriends);
-	}, [friends])
+	}, [friends]);
 
 	return (
 		<div>
