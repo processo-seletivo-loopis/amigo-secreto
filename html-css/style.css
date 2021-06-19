@@ -2,7 +2,7 @@
     background: #E5E5E5;
 }
 
-.title-home {
+.title {
     position: absolute;
     width: 420px;
     height: 69px;
@@ -10,7 +10,7 @@
     top: 49px;
 }
 
-.title {
+.title h2 {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -28,24 +28,15 @@
     left: 1040px;
     top: 555px;
 }
-.btn-adic {
-    
-    background: #004E89;
-    border-radius: 4px;
-    color: #FFFFFF;
+
+.btn-home button {   
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
+    
 }
-
-
 
 .image-home {
     position: absolute;
@@ -75,6 +66,101 @@
     align-items: center;
 
     color: #000000;
+}
 
+.lbl-name {
+    /* Nome */
+position: relative;
+width: 269px;
+height: 39px;
+left: 428px;
+top: 177px;
+}
 
+.style-lbl {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    
+    color: #000000;
+}
+
+.lbl-email {
+    /* Email */
+
+position: absolute;
+width: 269px;
+height: 39px;
+left: 428px;
+top: 324px;
+
+}
+
+#nome {
+    /* imput nome*/
+
+position: absolute;
+width: 500px;
+height: 60px;
+left: 428px;
+top: 230px;
+}
+
+.input-style input {
+    background: #FFFFFF;
+    border: 3px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#email {
+    /* input email */
+position: absolute;
+width: 500px;
+height: 60px;
+left: 428px;
+top: 370px;
+}
+
+.btns-color {
+    background: #004E89;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.register {
+    position: absolute;
+    width: 500px;
+    height: 70px;
+    left: 433px;
+    top: 460px;
+}
+
+.register-add {
+    position: absolute;
+    width: 500px;
+    height: 70px;
+    left: 433px;
+    top: 550px;
+}
+
+.btns-add button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#btn-save {
+    position: absolute;
+    width: 235px;
+    height: 65px;
+    left: 563px;
+    top: 475px;
 }
