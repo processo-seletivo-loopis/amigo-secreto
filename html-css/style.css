@@ -116,6 +116,7 @@ top: 230px;
     box-sizing: border-box;
     border-radius: 4px;
 }
+
 #email {
     /* input email */
 position: absolute;
