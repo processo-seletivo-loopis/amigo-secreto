@@ -1,24 +1,20 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Title from './components/Title';
-import ImageHome from './components/ImageHome';
-import Buttons from './components/Buttons';
-import friendsService from './services/friendsService';
+import Home from './components/Home';
+import AddFriend from './components/AddFriend';
+import EditFriend from './components/EditFriend';
 import './App.css';
 
 export default function App() {
 
-	const [friends, setFriends] = useState([]);
-
-	useEffect(() => {
-		const newFriends = friendsService.getFriends();
-		setFriends(newFriends);
-	}, [friends]);
-
 	return (
-		<div>
+		<BrowserRouter>
 			<Title />
-			<ImageHome />
-			<Buttons />
-		</div>
+			<Switch>
+				<Route path="/" exact={true} component={Home} />
+				<Route path="/addFriend" component={AddFriend} />
+				<Route path="/editFriend" component={EditFriend} />
+			</Switch>
+		</BrowserRouter>
 	);
 }

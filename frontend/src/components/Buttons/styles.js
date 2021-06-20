@@ -8,4 +8,11 @@ const StyledButtonsContainer = styled.div`
     top: 555px;
 `
 
-export default StyledButtonsContainer;
+const button_add = {
+    width: "250px",
+    height: "80px",
+    left: "1040px",
+    top: "555px"
+}
+
+export {StyledButtonsContainer, button_add };
