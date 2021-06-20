@@ -10,10 +10,10 @@ const StyledButton = styled.button`
     font-size: 20px;
     text-align: center;
     position: absolute;
-    width: ${props => props.position.width};
-    height: ${props => props.position.height};
-    left: ${props => props.position.left};
-    top: ${props => props.position.top};
+    width: ${props => props.position_size.width};
+    height: ${props => props.position_size.height};
+    left: ${props => props.position_size.left};
+    top: ${props => props.position_size.top};
 `
 
 export default StyledButton;

@@ -2,15 +2,15 @@ import React from 'react'
 import InputName from '../InputName';
 import InputEmail from '../InputEmail';
 import Button from '../Button';
-import {Form, register, register_add} from './styles';
+import { register, register_add } from './styles';
 
 export default function AddFriend() {
     return (
-        <Form>
+        <form>
             <InputName />
             <InputEmail />
-            <Button position={register} text="CADASTRAR" />
-            <Button position={register_add} text="CADASTRAR E ADICIONAR OUTRO" />
-        </Form>
+            <Button position_size={register} text="CADASTRAR" />
+            <Button position_size={register_add} text="CADASTRAR E ADICIONAR OUTRO" />
+        </form>
     );
 }

@@ -1,9 +1,3 @@
-import styled from "styled-components";
-
-const Form = styled.form`
-    background: #FFFFFF;
-`
-
 const register = {
     width: "500px",
     height: "70px",
@@ -18,4 +12,4 @@ const register_add = {
     top: "550px"
 }
 
-export { Form, register, register_add };
+export { register, register_add };

@@ -12,7 +12,7 @@ export default function Home() {
 		//const newFriends = friendsService.getFriends();
         const newFriends = [];
 		setFriends(newFriends);
-	}, [friends]);
+	}, []);
 
     return (
         <div>
