@@ -39,3 +39,6 @@ Thumbs.db
 # Extras #
 ######################
 .vscode
+migrations
+__pycache__
+env
