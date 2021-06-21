@@ -14,6 +14,9 @@ const StyledButton = styled.button`
     height: ${props => props.position_size.height};
     left: ${props => props.position_size.left};
     top: ${props => props.position_size.top};
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 export default StyledButton;
