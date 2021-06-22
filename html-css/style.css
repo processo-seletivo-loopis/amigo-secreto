@@ -1,4 +1,4 @@
-* {
+body {
     background: #E5E5E5;
 }
 
@@ -163,4 +163,88 @@ top: 370px;
     height: 65px;
     left: 563px;
     top: 475px;
+}
+
+.body-alert {
+    background-color:#393939; 
+}
+
+.alert {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 395px;
+    top: 180px; 
+
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.title-alert {
+    position: absolute;
+    width: 500px;
+    height: 34px;
+    left: 170px;
+    top: 13px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+
+    color: #004E89;
+}
+.delete-friend p {
+    color: #004E89;
+    padding: 5px;
+}
+.delete-friend {
+    position: absolute;
+    width: 363px;
+    height: 10px;
+    left: 119px;
+    top: 100px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-cancel {
+    position: absolute;
+    width: 166px;
+    height: 55.33px;
+    left: 316px;
+    top: 219px;
+
+    background: #004E89;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.btn-yes {
+    position: absolute;
+    width: 166px;
+    height: 55.33px;
+    left: 119px;
+    top: 219px;
+
+    background: #FF6B35;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.alert button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+
+    padding: 0%;
 }
