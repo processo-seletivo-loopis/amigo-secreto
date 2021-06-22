@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import InputName from '../InputName';
 import InputEmail from '../InputEmail';
 import Button from '../Button';
+import service from '../../services/friendsService';
 import save from './styles';
 
 export default function EditFriend({location}) {
@@ -10,15 +11,28 @@ export default function EditFriend({location}) {
 
     const [name, setName] = useState(fromFriend.nome);
     const [email, setEmail] = useState(fromFriend.email);
-    console.log(name);
-    console.log(email);
 
-    const handleSubmit = () => {};
+    const handleChangeEmail = (value) => {
+        setEmail(value);
+    }
+
+    const handleChangeName = (value) => {
+        setName(value);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = {
+            nome: name,
+            email: email
+        };
+        service.updateFriend(fromFriend.id, formData);
+    }
 
     return (
         <form onSubmit={handleSubmit}>
-            <InputName name={name} />
-            <InputEmail email={email} />
+            <InputName name={name} onChangeName={handleChangeName} />
+            <InputEmail email={email} onChangeEmail={handleChangeEmail} />
             <Button position_size={save} text="SALVAR" />
         </form>
     );
