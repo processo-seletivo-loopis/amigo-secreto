@@ -1,19 +1,19 @@
 import api from './axios.js';
 
 const getFriends = () => {
-    return api.get('/friend');
+    return api.get('/users/');
 };
 
 const createFriend = (data) => {
-    return api.post('/friend', data);
+    return api.post('/users/', data);
 };
 
 const updateFriend = (id, data) => {
-    return api.put(`/friend/${id}`, data);
+    return api.put(`/users/${id}`, data);
 };
 
 const removeFriend = (id) => {
-    return api.delete(`/friend/${id}`);
+    return api.delete(`/users/${id}`);
 };
 
 const getDraw = () => {

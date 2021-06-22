@@ -1,14 +1,16 @@
 import React from 'react'
-import Button from '../Button';
+import ButtonAddHome from '../ButtonAddHome'
+import ButtonDrawHome from '../ButtonDrawHome';
 import { Link } from 'react-router-dom'
-import {StyledButtonsContainer, button_add} from './styles';
+import { StyledButtonsContainer, rightButton, leftButton} from './styles';
 
-export default function Buttons() {
+export default function Buttons({canDraw}) {
     return (
         <StyledButtonsContainer>
             <Link to="/addFriend">
-                <Button position_size={button_add} text="ADICIONAR" />
+                <ButtonAddHome position_size={canDraw ? leftButton : rightButton}/>
             </Link>
+            {canDraw && <ButtonDrawHome position_size={rightButton} />}
         </StyledButtonsContainer>
     )
 }
