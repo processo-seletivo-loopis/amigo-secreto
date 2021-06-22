@@ -9,15 +9,15 @@ const createFriend = (data) => {
 };
 
 const updateFriend = (id, data) => {
-    return api.put(`/users/${id}`, data);
+    return api.put(`/users/${id}/`, data);
 };
 
 const removeFriend = (id) => {
-    return api.delete(`/users/${id}`);
+    return api.delete(`/users/${id}/`);
 };
 
 const getDraw = () => {
-    return api.get('/draw');
+    return api.get('/draw/');
 }
 
 const service = {

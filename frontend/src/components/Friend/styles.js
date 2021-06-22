@@ -5,7 +5,6 @@ const FriendCard = styled.div`
     height: 150px;
     display: flex;
     flex-direction: column;
-
     background: #F5F5F5;
     border-radius: 4px;
 `
@@ -49,4 +48,4 @@ const DeleteIcon = styled.img.attrs(props => ({
     }
 `
 
-export { FriendCard, Name, NameAndButtons, Email, DeleteIcon};
+export { FriendCard, Name, NameAndButtons, Email, DeleteIcon };

@@ -9,7 +9,7 @@ export default function EditFriend({location}) {
 
     const fromFriend = location.state;
 
-    const [name, setName] = useState(fromFriend.nome);
+    const [name, setName] = useState(fromFriend.name);
     const [email, setEmail] = useState(fromFriend.email);
 
     const handleChangeEmail = (value) => {
@@ -23,7 +23,7 @@ export default function EditFriend({location}) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = {
-            nome: name,
+            name: name,
             email: email
         };
         service.updateFriend(fromFriend.id, formData);
