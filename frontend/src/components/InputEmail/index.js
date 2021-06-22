@@ -1,11 +1,11 @@
 import React from 'react'
 import StyledInputEmail from './styles'
 
-export default function InputEmail() {
+export default function InputEmail({email}) {
     return (
         <StyledInputEmail>
-            <label for="email" class="lbl-email style-lbl">Email</label>
-            <input type="email" name="email" id="email" required />
+            <label htmlFor="email" className="lbl-email style-lbl">Email</label>
+            <input type="email" value={email} name="email" id="email" required />
         </StyledInputEmail>
     )
 }
