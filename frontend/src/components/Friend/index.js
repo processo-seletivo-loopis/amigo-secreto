@@ -16,7 +16,7 @@ export default function Friend({friend}) {
         <FriendCard>
             <NameAndButtons>
                 <Name>
-                    {friend.nome}
+                    {friend.name}
                 </Name>
                 <div style={{background: "inherit"}}>
                     <Link style={{background: "inherit"}} to={{

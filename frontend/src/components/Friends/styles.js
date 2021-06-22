@@ -7,7 +7,7 @@ const FriendsContainer = styled.div`
     padding: 0 72px;
     top: 266px;
     display: flex;
-    flex-warp: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 `
 
