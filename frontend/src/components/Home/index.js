@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <div>
             {friends.length === 0 && <ImageHome />}
-			<Buttons />
+			<Buttons canDraw={friends.length >= 3} />
         </div>
     )
 }
