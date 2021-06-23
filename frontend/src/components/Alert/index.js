@@ -4,6 +4,7 @@ import { Title } from './styles'
 import AlertDelete from '../AlertDelete';
 import AlertAdd from '../AlertAdd';
 import AlertEdit from '../AlertEdit';
+import AlertDraw from '../AlertDraw';
 import styles from './styles.module.css'
 
 Modal.setAppElement("#root");
@@ -25,6 +26,9 @@ export default function Alert({ type = 1, friend = {}, isOpen, onClose = {}, add
             }
             {type === 3 &&
                 <AlertEdit />
+            }
+            {type === 4 &&
+                <AlertDraw onCancel={handleCancel} />
             }
         </Modal>
     )

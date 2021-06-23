@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Title = styled.span`
     position: absolute;
-    left: 170px;
     top: 13px;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;

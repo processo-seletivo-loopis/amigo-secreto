@@ -16,8 +16,8 @@ const removeFriend = async (id) => {
     return await api.delete(`/users/${id}/`);
 };
 
-const getDraw = async () => {
-    return await api.get('/draw/');
+const postDraw = async () => {
+    return await api.post('/draw/');
 }
 
 const service = {
@@ -25,7 +25,7 @@ const service = {
     createFriend,
     updateFriend,
     removeFriend,
-    getDraw
+    postDraw
 };
 
 export default service;
