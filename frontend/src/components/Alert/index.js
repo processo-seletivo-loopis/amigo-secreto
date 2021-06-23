@@ -3,11 +3,12 @@ import Modal from "react-modal";
 import { Title } from './styles'
 import AlertDelete from '../AlertDelete';
 import AlertAdd from '../AlertAdd';
+import AlertEdit from '../AlertEdit';
 import styles from './styles.module.css'
 
 Modal.setAppElement("#root");
 
-export default function Alert({ type = 1, friend = {}, isOpen, onClose, addAnother = false }) {
+export default function Alert({ type = 1, friend = {}, isOpen, onClose = {}, addAnother = false }) {
 
     const handleCancel = () => {
         onClose();
@@ -21,6 +22,9 @@ export default function Alert({ type = 1, friend = {}, isOpen, onClose, addAnoth
             }
             {type === 2 &&
                 <AlertDelete friend={friend} onCancel={handleCancel} />
+            }
+            {type === 3 &&
+                <AlertEdit />
             }
         </Modal>
     )
