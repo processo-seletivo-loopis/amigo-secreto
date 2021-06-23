@@ -1,23 +1,23 @@
 import api from './axios.js';
 
-const getFriends = () => {
-    return api.get('/users/');
+const getFriends = async () => {
+    return await api.get('/users/');
 };
 
-const createFriend = (data) => {
-    return api.post('/users/', data);
+const createFriend = async (data) => {
+    return await api.post('/users/', data);
 };
 
-const updateFriend = (id, data) => {
-    return api.put(`/users/${id}/`, data);
+const updateFriend = async (id, data) => {
+    return await api.put(`/users/${id}/`, data);
 };
 
-const removeFriend = (id) => {
-    return api.delete(`/users/${id}/`);
+const removeFriend = async (id) => {
+    return await api.delete(`/users/${id}/`);
 };
 
-const getDraw = () => {
-    return api.get('/draw/');
+const getDraw = async () => {
+    return await api.get('/draw/');
 }
 
 const service = {

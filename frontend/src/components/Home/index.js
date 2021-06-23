@@ -9,11 +9,12 @@ export default function Home() {
 
     const [friends, setFriends] = useState([]);
 
+    const getFriends = async () => {
+        const newFriends = await friendsService.getFriends();
+        setFriends(newFriends.data);
+    }
+
     useEffect(() => {
-        const getFriends = async () => {
-            const newFriends = await friendsService.getFriends();
-            setFriends(newFriends.data);
-        }
         getFriends();
     }, [friends]);
 
