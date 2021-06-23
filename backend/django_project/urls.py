@@ -24,4 +24,5 @@ router.register(r"users", views.UserAppView, "user")
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
+    path("api/draw/", views.getDraw),
 ]
