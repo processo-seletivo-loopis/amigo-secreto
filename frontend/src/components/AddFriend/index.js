@@ -14,22 +14,23 @@ export default function AddFriend() {
     const [email, setEmail] = useState("");
 
     const handleClickOnlyAdd = () => {
-        service.createFriend({
-            name: name,
-            email: email
-        });
         setAddAnother(false);
-        setIsAlertOpen(true);
     };
 
     const handleClickAddAndContinue = () => {
-        service.createFriend({
+        setAddAnother(true);
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        await service.createFriend({
             name: name,
             email: email
         });
-        setAddAnother(true);
+        setEmail("");
+        setName("");
         setIsAlertOpen(true);
-    };
+    }
 
     const handleClose = () => {
         setIsAlertOpen(false);
@@ -44,12 +45,12 @@ export default function AddFriend() {
     }
 
     return (
-        <div>
+        <form onSubmit={handleSubmit} >
             <InputName name={name} onChangeName={handleChangeName} />
             <InputEmail email={email} onChangeEmail={handleChangeEmail} />
             <Button onClick={handleClickOnlyAdd} position_size={register} text="CADASTRAR" />
             <Button onClick={handleClickAddAndContinue} position_size={register_add} text="CADASTRAR E ADICIONAR OUTRO" />
             <Alert onClose={handleClose} isOpen={isAlertOpen} addAnother={addAnother} />
-        </div>
+        </form>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledInputEmail from './styles'
 
-export default function InputEmail({email, onChangeEmail}) {
+export default function InputEmail({ email, onChangeEmail }) {
 
     const handleChange = (event) => {
         const { value } = event.target;

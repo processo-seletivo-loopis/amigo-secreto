@@ -12,6 +12,7 @@ export default function Buttons({ friends, canDraw }) {
 
     const handleClick = () => {
         service.postDraw();
+        console.log("sorteado");
         setIsAlertOpen(true);
     }
 
