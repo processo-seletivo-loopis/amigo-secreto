@@ -9,18 +9,19 @@ export default function Home() {
 
     const [friends, setFriends] = useState([]);
 
+    const getFriends = async () => {
+        const newFriends = await friendsService.getFriends();
+        setFriends(newFriends.data);
+    }
+
     useEffect(() => {
-        const getFriends = async () => {
-            const newFriends = await friendsService.getFriends();
-            setFriends(newFriends.data);
-        }
         getFriends();
     }, [friends]);
 
     return (
         <div>
             {friends.length === 0 ? <ImageHome /> : <Friends friends={friends} />}
-            <Buttons canDraw={friends.length >= 3} />
+            <Buttons friends={friends} canDraw={friends.length >= 3} />
         </div>
     )
 }

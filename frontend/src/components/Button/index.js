@@ -1,8 +1,13 @@
 import React from 'react'
 import StyledButton from './styles'
 
-export default function Button({position_size,text}) {
+export default function Button({ position_size, text, onClick }) {
+
+    const handleClick = () => {
+        onClick();
+    }
+
     return (
-        <StyledButton position_size={position_size}>{text}</StyledButton>
+        <StyledButton onClick={handleClick} position_size={position_size}>{text}</StyledButton>
     )
 }

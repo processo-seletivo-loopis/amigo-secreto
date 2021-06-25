@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledInputName from './styles'
 
-export default function InputName({name, onChangeName}) {
+export default function InputName({ name, onChangeName }) {
 
     const handleChange = (event) => {
         const { value } = event.target;
