@@ -16,11 +16,15 @@ export default function Home() {
 
     useEffect(() => {
         getFriends();
-    }, [friends]);
+    }, []);
+
+    const refreshFriends = () => {
+        getFriends();
+    }
 
     return (
         <div>
-            {friends.length === 0 ? <ImageHome /> : <Friends friends={friends} />}
+            {friends.length === 0 ? <ImageHome /> : <Friends friends={friends} onRefresh={refreshFriends} />}
             <Buttons friends={friends} canDraw={friends.length >= 3} />
         </div>
     )

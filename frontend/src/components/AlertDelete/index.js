@@ -10,8 +10,8 @@ export default function AlertDelete({ friend, onCancel }) {
         setIsDeleted(true);
     }
 
-    const handleClickClose = () => {
-        (isDeleted && service.removeFriend(friend.id));
+    const handleClickClose = async () => {
+        (isDeleted && await service.removeFriend(friend.id));
         onCancel();
     }
 

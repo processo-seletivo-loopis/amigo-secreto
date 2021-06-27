@@ -2,7 +2,11 @@ import React from 'react'
 import Friend from '../Friend'
 import { FriendsContainer, Obs } from './styles'
 
-export default function Friends({ friends }) {
+export default function Friends({ friends, onRefresh }) {
+
+    const handleRefresh = () => {
+        onRefresh();
+    }
 
     return (
         <div>
@@ -11,7 +15,7 @@ export default function Friends({ friends }) {
             </Obs>
             <FriendsContainer>
                 {friends.map((friend) => {
-                    return <Friend key={friend.id} friend={friend} />
+                    return <Friend key={friend.id} friend={friend} onRefresh={handleRefresh} />
                 })}
             </FriendsContainer>
         </div>
