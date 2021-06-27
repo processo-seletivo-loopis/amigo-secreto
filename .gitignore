@@ -43,3 +43,4 @@ Thumbs.db
 migrations
 __pycache__
 env
+.env
