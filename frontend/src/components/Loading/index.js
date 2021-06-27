@@ -6,7 +6,7 @@ export default function Loading() {
     return (
         <StyledDiv>
             <Spinner animation="border" />
-            <span>Realizando Sorteio...</span>
+            <span style={{ paddingTop: "10px" }}>Realizando Sorteio, por favor permaneça nessa página!</span>
         </StyledDiv>
     )
 }
