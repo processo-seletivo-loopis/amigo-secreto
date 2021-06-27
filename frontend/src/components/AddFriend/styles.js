@@ -1,3 +1,13 @@
+import styled from "styled-components";
+
+const EmailError = styled.span`
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 428px;
+    top: 430px;
+`
+
 const register = {
     width: "500px",
     height: "70px",
@@ -12,4 +22,4 @@ const register_add = {
     top: "550px"
 }
 
-export { register, register_add };
+export { EmailError, register, register_add };
