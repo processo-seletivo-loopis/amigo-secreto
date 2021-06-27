@@ -1,6 +1,6 @@
 from random import choice
 
-from rest_framework import viewsets 
+from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -12,8 +12,8 @@ from django.core.mail import send_mail
 
 
 class UserAppView(viewsets.ModelViewSet):
-     serializer_class = UserAppSerializer
-     queryset = UserApp.objects.all()
+    serializer_class = UserAppSerializer
+    queryset = UserApp.objects.all()
 
 # class UserAppView(viewsets.ViewSet):
 
@@ -27,6 +27,7 @@ class UserAppView(viewsets.ModelViewSet):
 #        user = get_object_or_404(queryset, pk=pk)
 #        serializer = UserAppSerializer(user)
 #        return Response(serializer.data)
+
 
 @api_view(["POST"])
 def getDraw(request):
