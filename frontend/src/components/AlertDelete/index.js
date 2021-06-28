@@ -6,12 +6,12 @@ export default function AlertDelete({ friend, onCancel }) {
 
     const [isDeleted, setIsDeleted] = useState(false);
 
-    const handleClickDelete = () => {
+    const handleClickDelete = async () => {
+        await service.removeFriend(friend.id);
         setIsDeleted(true);
     }
 
-    const handleClickClose = async () => {
-        (isDeleted && await service.removeFriend(friend.id));
+    const handleClickClose = () => {
         onCancel();
     }
 

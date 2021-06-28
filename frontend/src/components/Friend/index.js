@@ -1,20 +1,12 @@
-import { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { FriendCard, Name, NameAndButtons, Email, DeleteIcon } from './styles'
-import Alert from '../Alert';
 
-export default function Friend({ friend, onRefresh }) {
-
-    const [isAlertOpen, setIsAlertOpen] = useState(false);
+export default function Friend({ friend, onDelete }) {
 
     const handleClickDelete = () => {
-        setIsAlertOpen(true);
+        onDelete(friend);
     };
-
-    const handleClose = () => {
-        onRefresh();
-        setIsAlertOpen(false);
-    }
 
     return (
         <div>
@@ -39,7 +31,6 @@ export default function Friend({ friend, onRefresh }) {
                     {friend.email}
                 </Email>
             </FriendCard>
-            <Alert type={2} onClose={handleClose} friend={friend} isOpen={isAlertOpen} />
         </div>
     )
 }
