@@ -16,10 +16,16 @@ para o processo seletivo da Loopis, empresa JR do IFPB - Campus Cajazeiras
 
 - Faça um clone do repositório ```$ git clone https://github.com/processo-seletivo-loopis/amigo-secreto.git```
 
+```
+BackEnd
+```
 - Adentre o backend ```$ cd backend```
 - Performe os seguintes comandos: ```$ python manage.py makemigrations django_app && python manage.py migrate```
 - Inicialize o servidor da API: ```$ python manage.py runserver```
 
+```
+FrontEnd
+```
 - Adentre o frontend ```$ cd frontend```
 - Performe os seguintes comandos: ```$ npm install && npm audit fix```
 - Inicialize o servidor do FrontEnd: ```$ npm start```
