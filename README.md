@@ -20,7 +20,7 @@ para o processo seletivo da Loopis, empresa JR do IFPB - Campus Cajazeiras
 BackEnd
 ```
 - Adentre o backend ```$ cd backend```
-- Instale os requisitos: ````$ pip install -r requirements.txt```
+- Instale os requisitos: ```$ pip install -r requirements.txt```
 - Performe os seguintes comandos: ```$ python manage.py makemigrations django_app && python manage.py migrate```
 - Inicialize o servidor da API: ```$ python manage.py runserver```
 
