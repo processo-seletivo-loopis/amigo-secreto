@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { StyledButtonsContainer, rightButton, leftButton } from './styles';
 import service from '../../services/friendsService';
 
-export default function Buttons({ friends, canDraw }) {
+export default function Buttons({ friends, canDraw, onRefresh }) {
 
     const [isAlertOpen, setIsAlertOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -20,6 +20,7 @@ export default function Buttons({ friends, canDraw }) {
     }
 
     const handleClose = () => {
+        onRefresh();
         setIsAlertOpen(false);
     }
 

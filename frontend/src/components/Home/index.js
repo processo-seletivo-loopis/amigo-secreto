@@ -25,7 +25,7 @@ export default function Home() {
     return (
         <div>
             {friends.length === 0 ? <ImageHome /> : <Friends friends={friends} onRefresh={refreshFriends} />}
-            <Buttons friends={friends} canDraw={friends.length >= 3} />
+            <Buttons friends={friends} canDraw={friends.length >= 3} onRefresh={refreshFriends} />
         </div>
     )
 }
