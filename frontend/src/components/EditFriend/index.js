@@ -4,7 +4,7 @@ import InputEmail from '../InputEmail';
 import Button from '../Button';
 import Alert from '../Alert';
 import service from '../../services/friendsService';
-import save from './styles';
+import { save, EmailError } from './styles';
 
 export default function EditFriend({ location }) {
 
@@ -13,6 +13,7 @@ export default function EditFriend({ location }) {
     const [isAlertOpen, setIsAlertOpen] = useState(false);
     const [name, setName] = useState(fromFriend.name);
     const [email, setEmail] = useState(fromFriend.email);
+    const [hasError, setHasError] = useState(false);
 
     const handleChangeEmail = (value) => {
         setEmail(value);
@@ -22,14 +23,19 @@ export default function EditFriend({ location }) {
         setName(value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const formData = {
-            name: name,
-            email: email
-        };
-        service.updateFriend(fromFriend.id, formData);
-        setIsAlertOpen(true);
+        try {
+            const formData = {
+                name: name,
+                email: email
+            };
+            await service.updateFriend(fromFriend.id, formData);
+            setHasError(false);
+            setIsAlertOpen(true);
+        } catch (err) {
+            setHasError(true);
+        }
     }
 
     const handleClick = () => { };
@@ -38,6 +44,7 @@ export default function EditFriend({ location }) {
         <form onSubmit={handleSubmit}>
             <InputName name={name} onChangeName={handleChangeName} />
             <InputEmail email={email} onChangeEmail={handleChangeEmail} />
+            {hasError && <EmailError>*Email ja cadastrado, por favor informe outro email.</EmailError>}
             <Button onClick={handleClick} position_size={save} text="SALVAR" />
             <Alert type={3} isOpen={isAlertOpen} />
         </form>
